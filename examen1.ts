@@ -1,6 +1,6 @@
-let nombre="Ricardo Tapia";
-const edad = 23;
-var PERSONAJE = {
+let nombre:string="Ricardo Tapia";
+let edad :number= 23;
+const PERSONAJE :{nombre:string,edad:number}= {
   nombre: nombre,
   edad: edad
 };
@@ -18,7 +18,7 @@ console.log(batman);
 /*function resultadoDoble( a, b ){
   return (a + b) * 2
 }*/
-let resultadoDoble=(a:number,b:number)=>a+b;
+let resultadoDoble=(a:number,b:number)=>(a+b)*2;
 
 /* Función con parametros obligatorios, opcionales y por defecto
 // donde NOMBRE = obligatorio
@@ -36,10 +36,10 @@ function getAvenger(nombre:string,poder?:string,arma:string="arco"){
 let mensaje;
 if(poder)
 {
-	mensaje=nombre+" tiene el poder de : "+poder+" y un arma : "+arma;
+	mensaje=`${nombre}  tiene el poder de : ${poder} y un arma : ${arma}`;
 }
 else{
-	mensaje=nombre+" tiene un "+poder;
+	mensaje=`${nombre} tiene un ${poder}`;
 }
 }
 console.log(getAvenger( "Thor"));
@@ -60,7 +60,7 @@ class rectangulo{
 		this.base=base;
 		this.altura=altura;
 	}
-	 area(){
+	 area():Number{
 	 	return this.base*this.altura;
 	 }
 
